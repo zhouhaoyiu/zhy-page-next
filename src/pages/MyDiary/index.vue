@@ -1,6 +1,7 @@
 <template>
   <div>
-    <q-list>
+    <!-- 最大高度 -->
+    <q-list no-border padding v-if="DiaryArr" class="q-mb-md text-weight-bold">
       <!-- 日记列表 -->
       <q-item
         v-for="diary in DiaryArr"
@@ -9,12 +10,23 @@
         @click="$router.push('/myDiary/' + (diary as any).id)"
       >
         <q-item-section>
-          <q-item-label>{{ (diary as any).title }}</q-item-label>
+          <q-item-label class="text-h5">{{
+            (diary as any).title
+          }}</q-item-label>
           <q-item-label caption>{{ (diary as any).date }}</q-item-label>
         </q-item-section>
-        ></q-item
-      >
+        >
+      </q-item>
     </q-list>
+
+    <q-pagination
+      v-model="current"
+      max="5"
+      direction-links
+      flat
+      color="grey"
+      active-color="primary"
+    />
   </div>
 </template>
 
@@ -24,14 +36,17 @@ import { onMounted, ref } from 'vue';
 defineOptions({
   name: 'MyDiary',
 });
-type Diary = {
+interface Diary {
   id: number;
   title: string;
   content: string;
   date: string;
-};
+}
+let current = ref(1);
 let DiaryArr = ref([]) as { value: Diary[] };
+
 onMounted(() => {
+  // 模拟数据 重复100条
   DiaryArr.value = [
     {
       id: 1,
