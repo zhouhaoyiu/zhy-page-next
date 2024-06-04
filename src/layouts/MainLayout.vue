@@ -52,7 +52,9 @@ let $route = useRoute();
 watch(
   () => $route.path,
   (newVal) => {
-    if (newVal === '/myDiary') {
+    if (newVal === '/') {
+      title.value = '周浩宇的个人网站';
+    } else if (newVal === '/myDiary') {
       title.value = "ZHY's 日记";
     } else if (newVal === '/myBlog') {
       title.value = "ZHY's 博客";
@@ -64,6 +66,12 @@ watch(
 );
 
 const linksList: EssentialLinkProps[] = [
+  {
+    title: '首页',
+    caption: 'Home',
+    icon: 'home',
+    link: '/',
+  },
   {
     title: "ZHY's  日记",
     caption: "ZHY's Diary",

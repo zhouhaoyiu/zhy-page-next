@@ -50,8 +50,7 @@ export default configure((/* ctx */) => {
       // polyfillModulePreload: true,
       // distDir
 
-      // extendViteConf (viteConf) {},
-      // viteVuePluginOptions: {},
+      // compilerOptions.isCustomElement: (tag) => tag.startsWith('dock-'),
 
       vitePlugins: [
         [
@@ -62,6 +61,11 @@ export default configure((/* ctx */) => {
             },
             eslint: {
               lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
+            },
+            vue: {
+              compilerOptions: {
+                isCustomElement: (tag) => tag.startsWith('dock-'),
+              },
             },
           },
           { server: false },

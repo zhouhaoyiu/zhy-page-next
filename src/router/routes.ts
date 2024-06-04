@@ -20,7 +20,7 @@ const routes: RouteRecordRaw[] = [
         path: '/MyDiary',
         component: () => import('pages/MyDiary/index.vue'),
         children: [],
-      }
+      },
     ],
   },
 

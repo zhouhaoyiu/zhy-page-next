@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="pageShow == 1">
     <h1 style="width: max-content">Hello.</h1>
     <p style="font-weight: 500; font-size: 2.2em; width: max-content">
       My name is Haoyu Zhou.
@@ -32,28 +32,71 @@
       Thank you for your visit.
     </p>
   </div>
+  <div v-if="pageShow == 2">
+    <q-card class="my-card">
+      <img src="https://cdn.quasar.dev/img/mountains.jpg" />
+
+      <q-card-section>
+        <div class="text-h6">Radwimps</div>
+        <div class="text-subtitle2">Japanese Rock Band</div>
+      </q-card-section>
+
+      <q-card-section class="q-pt-none">
+        {{ RadWimps }}
+      </q-card-section>
+    </q-card>
+  </div>
+  <dock-wrapper id="dock">
+    <dock-item v-for="i in 2" :key="i">
+      <div class="item" @click="goHomePage(i)">
+        {{ i }}
+      </div>
+    </dock-item>
+  </dock-wrapper>
 </template>
 
-<script setup lang="ts">
-// import { computed, ref } from 'vue';
-// import { Todo, Meta } from './models';
+<script lang="ts" setup>
+import 'dockbar';
+import { ref } from 'vue';
 
-// interface Props {
-//   title: string;
-//   todos?: Todo[];
-//   meta: Meta;
-//   active: boolean;
-// }
-
-// const props = withDefaults(defineProps<Props>(), {
-//   todos: () => [],
-// });
-
-// const clickCount = ref(0);
-// function increment() {
-//   clickCount.value += 1;
-//   return clickCount.value;
-// }
-
-// const todoCount = computed(() => props.todos.length);
+let pageShow = ref(1);
+const goHomePage = (i: number) => {
+  pageShow.value = i;
+  console.log('pageShow', pageShow);
+};
+const RadWimps = ref('');
+RadWimps.value =
+  'Radwimps (Japanese: ラッドウインプス, stylized as RADWIMPS) is a Japanese rock band, who debuted independently in 2003 and later on major label Toshiba EMI in 2005. The band\'s name, Radwimps, was formed from two English language slang terms, rad and wimp. According to the band, the coined word had several meanings, including "excellent weakling" and "superlative coward".';
 </script>
+<style scoped lang="scss">
+#dock {
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #ffffff 0%, #fefefe 100%);
+  border-radius: 999px;
+  border: 1px solid #e5e5e5;
+}
+.item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.my-card {
+  img {
+    border-radius: 10 10 0 0;
+    width: 100%;
+    height: 200px;
+  }
+  width: 350px;
+  height: 490px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+</style>
