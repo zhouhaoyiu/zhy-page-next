@@ -1,14 +1,12 @@
 <template>
-  <div v-if="pageShow == 1">
-    <h1 style="width: max-content">Hello.</h1>
-    <p style="font-weight: 500; font-size: 2.2em; width: max-content">
-      My name is Haoyu Zhou.
-    </p>
-    <p style="width: max-content">
+  <div v-if="pageShow == 1" id="page1">
+    <h1>Hello.</h1>
+    <p style="font-weight: 500; font-size: 2.2em">My name is Haoyu Zhou.</p>
+    <p>
       I am an independent software developer currently based in Taiyuan, Shanxi,
       China.
     </p>
-    <p style="width: max-content">
+    <p>
       my Chinese name is 周浩宇 (
       <a
         name=""
@@ -17,17 +15,17 @@
         >zhōu hào yǔ</a
       >).
     </p>
-    <p style="width: max-content">
+    <p>
       You can visit my
       <span style="font-weight: 400; font-size: 1.2em">github</span> through
       this <a href="https://github.com/zhouhaoyiu/" target="_blank">link</a>.
     </p>
-    <p style="width: max-content">
+    <p>
       You can <span style="font-weight: 400; font-size: 1.2em">contact</span> me
       through this
       <a href="mailto:knight9z@vip.qq.com" target="_blank">email</a>.
     </p>
-    <p style="width: max-content">
+    <p>
       <!-- 谢谢你的来访 -->
       Thank you for your visit.
     </p>
@@ -69,6 +67,10 @@ RadWimps.value =
   'Radwimps (Japanese: ラッドウインプス, stylized as RADWIMPS) is a Japanese rock band, who debuted independently in 2003 and later on major label Toshiba EMI in 2005. The band\'s name, Radwimps, was formed from two English language slang terms, rad and wimp. According to the band, the coined word had several meanings, including "excellent weakling" and "superlative coward".';
 </script>
 <style scoped lang="scss">
+#page1 {
+  text-align: center;
+  padding: 20px;
+}
 #dock {
   position: fixed;
   left: 50%;
