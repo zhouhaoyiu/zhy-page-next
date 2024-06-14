@@ -21,6 +21,10 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/MyDiary/index.vue'),
         children: [],
       },
+      {
+        path: '/diaryDetail/:id',
+        component: () => import('pages/MyDiary/diaryDetail.vue'),
+      },
     ],
   },
 

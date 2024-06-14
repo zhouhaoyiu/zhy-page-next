@@ -7,7 +7,7 @@
         v-for="diary in DiaryArr"
         :key="(diary as any).id"
         clickable
-        @click="$router.push('/myDiary/' + (diary as any).id)"
+        @click="$router.push('/diaryDetail/' + (diary as any).id)"
       >
         <q-item-section>
           <q-item-label class="text-h5">{{

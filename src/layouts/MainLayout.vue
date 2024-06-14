@@ -76,14 +76,14 @@ const linksList: EssentialLinkProps[] = [
     title: "ZHY's  日记",
     caption: "ZHY's Diary",
     icon: 'book',
-    link: 'myDiary',
+    link: '/myDiary',
   },
 
   {
     title: "ZHY's 博客",
     caption: "ZHY's Blog",
     icon: 'rss_feed',
-    link: 'myBlog',
+    link: '/myBlog',
   },
   {
     title: 'Github',
