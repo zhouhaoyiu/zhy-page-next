@@ -15,7 +15,7 @@
           {{ title }}
         </q-toolbar-title>
 
-        <div>Create By Quasar v{{ $q.version }}</div>
+  
       </q-toolbar>
     </q-header>
 
