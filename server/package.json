@@ -14,5 +14,6 @@
   "dependencies": {
     "@koa/router": "15.7.0",
     "koa": "3.2.1"
-  }
+  },
+  "packageManager": "pnpm@11.9.0"
 }

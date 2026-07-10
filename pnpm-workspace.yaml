@@ -1,0 +1,6 @@
+packages:
+  - server
+allowBuilds:
+  '@parcel/watcher': true
+minimumReleaseAgeExclude:
+  - quasar@2.21.2
