@@ -1,6 +1,6 @@
-import { configure } from 'quasar/wrappers';
+import { defineConfig } from '@quasar/app-vite';
 
-export default configure((/* ctx */) => {
+export default defineConfig((/* ctx */) => {
   return {
     // https://v2.quasar.dev/quasar-cli-vite/prefetch-feature
     // preFetch: true,

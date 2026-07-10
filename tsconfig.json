@@ -1,8 +1,36 @@
 {
-  "extends": "@quasar/app-vite/tsconfig-preset",
+  "extends": "./node_modules/@quasar/app-vite/types/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    "paths": {
+      "components/*": [
+        "src/components/*"
+      ],
+      "layouts/*": [
+        "src/layouts/*"
+      ],
+      "pages/*": [
+        "src/pages/*"
+      ],
+      "src/*": [
+        "src/*"
+      ],
+      "app/*": [
+        "*"
+      ]
+    },
+    "types": [
+      "@quasar/app-vite"
+    ]
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue",
+    "quasar.config.*",
+    "postcss.config.*"
+  ],
   "exclude": [
     "./dist",
     "./.quasar",

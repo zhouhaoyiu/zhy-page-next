@@ -39,9 +39,7 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import EssentialLink, {
-  EssentialLinkProps,
-} from 'components/EssentialLink.vue';
+import EssentialLink from 'components/EssentialLink.vue';
 import { useRoute } from 'vue-router';
 defineOptions({
   name: 'MainLayout',
@@ -64,6 +62,13 @@ watch(
   },
   { immediate: true },
 );
+
+type EssentialLinkProps = {
+  title: string;
+  caption?: string;
+  link?: string;
+  icon?: string;
+};
 
 const linksList: EssentialLinkProps[] = [
   {
