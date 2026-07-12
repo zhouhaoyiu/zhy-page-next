@@ -5,17 +5,14 @@
       <!-- 日记列表 -->
       <q-item
         v-for="diary in DiaryArr"
-        :key="(diary as any).id"
+        :key="diary.id"
         clickable
-        @click="$router.push('/diaryDetail/' + (diary as any).id)"
+        @click="$router.push('/diaryDetail/' + diary.id)"
       >
         <q-item-section>
-          <q-item-label class="text-h5">{{
-            (diary as any).title
-          }}</q-item-label>
-          <q-item-label caption>{{ (diary as any).date }}</q-item-label>
+          <q-item-label class="text-h5">{{ diary.title }}</q-item-label>
+          <q-item-label caption>{{ diary.date }}</q-item-label>
         </q-item-section>
-        >
       </q-item>
     </q-list>
 
@@ -43,7 +40,7 @@ interface Diary {
   date: string;
 }
 let current = ref(1);
-let DiaryArr = ref([]) as { value: Diary[] };
+let DiaryArr = ref<Diary[]>([]);
 
 onMounted(() => {
   // 模拟数据 重复100条

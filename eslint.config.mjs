@@ -69,6 +69,7 @@ export default [
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-var-requires': 'off',
       '@typescript-eslint/no-require-imports': 'off',
+      '@typescript-eslint/no-explicit-any': 'error',
       'no-unused-vars': 'off',
       'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     },
