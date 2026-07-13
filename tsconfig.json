@@ -1,23 +1,22 @@
 {
   "extends": "./node_modules/@quasar/app-vite/types/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "ignoreDeprecations": "6.0",
     "paths": {
       "components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "layouts/*": [
-        "src/layouts/*"
+        "./src/layouts/*"
       ],
       "pages/*": [
-        "src/pages/*"
+        "./src/pages/*"
       ],
       "src/*": [
-        "src/*"
+        "./src/*"
       ],
       "app/*": [
-        "*"
+        "./*"
       ]
     },
     "types": [

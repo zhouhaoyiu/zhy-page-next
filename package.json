@@ -7,8 +7,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vue-tsc.json",
+    "lint": "oxlint --deny typescript/no-explicit-any .",
+    "type-check": "tsc --noEmit -p tsconfig.check.json",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
@@ -27,19 +27,12 @@
   "devDependencies": {
     "@quasar/app-vite": "3.0.1",
     "@types/node": "26.1.1",
-    "@typescript-eslint/eslint-plugin": "8.63.0",
-    "@typescript-eslint/parser": "8.63.0",
     "@vitejs/plugin-vue": "6.0.7",
     "autoprefixer": "10.5.2",
-    "eslint": "10.6.0",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-vue": "10.9.2",
+    "oxlint": "1.73.0",
     "prettier": "3.9.5",
-    "typescript": "6.0.3",
-    "vite": "8.1.4",
-    "vite-plugin-checker": "0.14.4",
-    "vue-eslint-parser": "^10.4.1",
-    "vue-tsc": "3.3.7"
+    "typescript": "7.0.2",
+    "vite": "8.1.4"
   },
   "engines": {
     "node": "^24 || ^22 || ^20 || ^18",

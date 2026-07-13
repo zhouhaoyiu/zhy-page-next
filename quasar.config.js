@@ -52,25 +52,6 @@ export default defineConfig((/* ctx */) => {
 
       // compilerOptions.isCustomElement: (tag) => tag.startsWith('dock-'),
 
-      vitePlugins: [
-        [
-          'vite-plugin-checker',
-          {
-            vueTsc: {
-              tsconfigPath: 'tsconfig.vue-tsc.json',
-            },
-            eslint: {
-              lintCommand: 'eslint "./**/*.{js,ts,mjs,cjs,vue}"',
-            },
-            vue: {
-              compilerOptions: {
-                isCustomElement: (tag) => tag.startsWith('dock-'),
-              },
-            },
-          },
-          { server: false },
-        ],
-      ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
