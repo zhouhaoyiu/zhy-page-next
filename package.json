@@ -17,27 +17,27 @@
   },
   "dependencies": {
     "@quasar/extras": "2.0.2",
-    "dockbar": "0.1.8",
+    "dockbar": "1.0.0",
     "koa": "3.2.1",
-    "quasar": "2.22.0",
-    "vue": "3.5.39",
-    "vue-router": "5.1.0",
+    "quasar": "2.23.2",
+    "vue": "3.5.40",
+    "vue-router": "5.2.0",
     "zhypage": "file:"
   },
   "devDependencies": {
-    "@quasar/app-vite": "3.0.1",
-    "@types/node": "26.1.1",
-    "@vitejs/plugin-vue": "6.0.7",
-    "autoprefixer": "10.5.2",
-    "oxlint": "1.73.0",
-    "prettier": "3.9.5",
+    "@quasar/app-vite": "3.2.0",
+    "@types/node": "26.1.2",
+    "@vitejs/plugin-vue": "6.0.8",
+    "autoprefixer": "10.5.4",
+    "oxlint": "1.76.0",
+    "prettier": "3.9.6",
     "typescript": "7.0.2",
-    "vite": "8.1.4"
+    "vite": "8.1.5"
   },
   "engines": {
-    "node": "^24 || ^22 || ^20 || ^18",
+    "node": "^26 || ^24 || ^22",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.18.0"
 }
