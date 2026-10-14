@@ -25,7 +25,7 @@
     "zhypage": "file:"
   },
   "devDependencies": {
-    "@quasar/app-vite": "3.2.0",
+    "@quasar/app-vite": "3.3.0",
     "@types/node": "26.1.2",
     "@vitejs/plugin-vue": "6.0.8",
     "autoprefixer": "10.5.4",
